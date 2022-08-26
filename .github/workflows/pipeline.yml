@@ -33,6 +33,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
         with:
+          python-version: '3.7.11'
           fetch-depth: 0
 
       # Autenticação do Heroku CLI via API TOKEN
