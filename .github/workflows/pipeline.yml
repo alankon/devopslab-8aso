@@ -82,7 +82,7 @@ jobs:
         with:
           credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
 
-   - name: Deploy to App Engine
+      - name: Deploy to App Engine
         id: appengine
         env: 
           ARTIFACT_REGISTRY_REPO: ${{ secrets.ARTIFACT_REGISTRY_REPO }}
