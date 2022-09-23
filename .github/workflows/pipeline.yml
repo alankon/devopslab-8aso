@@ -85,10 +85,10 @@ jobs:
       - name: Deploy to App Engine
         id: appengine
         env: 
-          ARTIFACT_REGISTRY_REPO: ${{ secrets.ARTIFACT_REGISTRY_REPO }}
+          ARTIFACT_REGISTRY: ${{ secrets.ARTIFACT_REGISTRY }}
         uses: 'google-github-actions/deploy-appengine@v0'
         with:
-          image_url: ${{ secrets.ARTIFACT_REGISTRY_REPO }}/myapp:latest
+          image_url: ${{ ARTIFACT_REGISTRY }}/myapp:latest
 
       - name: Prod Test
         run: 'curl "${{ steps.appengine.outputs.url }}"'
